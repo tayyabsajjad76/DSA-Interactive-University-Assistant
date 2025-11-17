@@ -497,4 +497,105 @@ int main() { // {1
                         cin >> manChoice; cin.ignore();
 
                         if (manChoice == 1) { // {24
-               
+                            cout << "\n--- Student Details ---\n";
+                            for (int i = 0; i < studentDB.size(); i++) {
+                                Student &s = studentDB[i];
+                                cout << "Reg: " << s.regNumber << ", Fee Paid: " << s.fee.paid << "/" << s.fee.total << endl;
+                                for (int j = 0; j < s.subjects.size(); j++) {
+                                    Subject &sub = s.subjects[j];
+                                    cout << "Subject: " << sub.subjectName << "\nMarks:\n";
+                                    string markNames[4] = { "Quiz Marks", "Assignment Marks", "Mid Marks", "Final Term Marks" };
+                                    for (int mt = 0; mt < 4; mt++) {
+                                        cout << markNames[mt] << ": ";
+                                        for (int k = 0; k < sub.allMarks[mt]->size(); k++)
+                                            cout << (*sub.allMarks[mt])[k] << " ";
+                                        cout << "\n";
+                                    }
+                                    cout << "Attendance: ";
+                                    for (int k = 0; k < sub.attendance.size(); k++) cout << sub.attendance[k] << " ";
+                                    cout << "\nAssignments: ";
+                                    for (int k = 0; k < sub.assignments.size(); k++) cout << sub.assignments[k] << ", ";
+                                    cout << "\n";
+                                }
+                            }
+                        } // }24
+                        else if (manChoice == 2) { // {25
+                            int eChoice;
+                            do { // {26
+                                cout << "\n--- Event Management ---\n1. Add\n2. Update\n3. Delete\n4. Show\n5. Back\nChoice: ";
+                                cin >> eChoice; cin.ignore();
+                                if (eChoice == 1) { string n; cout << "Event name: "; getline(cin, n); events.addEvent(n); }
+                                else if (eChoice == 2) { string oldN,newN; cout << "Old name: "; getline(cin,oldN); cout << "New name: "; getline(cin,newN); events.updateEvent(oldN,newN);}
+                                else if (eChoice == 3) { string n; cout << "Event name to delete: "; getline(cin,n); events.deleteEvent(n);}
+                                else if (eChoice == 4) events.showEvents();
+                            } while (eChoice != 5); // }26
+                        } // }25
+                        else if (manChoice == 3) { // {27
+                            int nChoice;
+                            do { // {28
+                                cout << "\n--- Notice Management ---\n1. Add\n2. Show\n3. Remove Latest\n4. Back\nChoice: ";
+                                cin >> nChoice; cin.ignore();
+                                if (nChoice == 1) { string t; cout << "Notice: "; getline(cin,t); notices.addNotice(t); }
+                                else if (nChoice == 2) notices.showNotices();
+                                else if (nChoice == 3) notices.removeNotice();
+                            } while (nChoice != 4); // }28
+                        } // }27
+                    } while (manChoice != 4); // }23
+                } // }22
+
+            } while (facChoice != 3 && facChoice != 4); // }3
+        } // }2
+
+        // ------------------- Student Login -------------------
+        else if (mainChoice == 2) { // {29
+            Student* s = studentLogin();
+            if (!s) { cout << "Invalid login!\n"; continue; }
+
+            int stuChoice;
+            do { // {30
+                cout << "\n--- Student Dashboard ---\n";
+                cout << "1. Subjects\n2. Fee Status\n3. Notices\n4. Logout\nChoice: ";
+                cin >> stuChoice; cin.ignore();
+
+                if (stuChoice == 1) { // {31
+                    int subChoice;
+                    cout << "Subjects:\n";
+                    for (int i = 0; i < s->subjects.size(); i++)
+                        cout << i + 1 << ". " << s->subjects[i].subjectName << endl;
+
+                    cout << "Choose subject number: ";
+                    cin >> subChoice; cin.ignore();
+
+                    if (subChoice > 0 && subChoice <= s->subjects.size()) { // {32
+                        Subject &sub = s->subjects[subChoice - 1];
+                        cout << "\n--- Subject Summary ---\n";
+                        cout << "Subject: " << sub.subjectName << "\n";
+                        cout << "Attendance: ";
+                        for (int i = 0; i < sub.attendance.size(); i++) cout << sub.attendance[i] << " ";
+                        cout << "\nQuiz Marks:\n";
+                        for (int i = 0; i < sub.quizMarks.size(); i++) cout << "Quiz " << i + 1 << ": " << sub.quizMarks[i] << endl;
+                        cout << "Assignment Marks:\n";
+                        for (int i = 0; i < sub.assignmentMarks.size(); i++) cout << "Assignment " << i + 1 << ": " << sub.assignmentMarks[i] << endl;
+                        cout << "Mid Marks:\n";
+                        for (int i = 0; i < sub.midMarks.size(); i++) cout << "Mid " << i + 1 << ": " << sub.midMarks[i] << endl;
+                        cout << "Final Term Marks:\n";
+                        for (int i = 0; i < sub.finalMarks.size(); i++) cout << "Final " << i + 1 << ": " << sub.finalMarks[i] << endl;
+                        cout << "Assignments Uploaded:\n";
+                        for (int i = 0; i < sub.assignments.size(); i++) cout << "Assignment " << i + 1 << ": " << sub.assignments[i] << endl;
+                    } // }32
+                } // }31
+                else if (stuChoice == 2) { cout << "Fee Paid: " << s->fee.paid << "/" << s->fee.total << endl; cout << "Remaining: " << s->fee.total - s->fee.paid << endl; }
+                else if (stuChoice == 3) notices.showNotices();
+            } while (stuChoice != 4); // }30
+        } // }29
+
+        else if (mainChoice == 3) {
+            cout << "Thank you for coming. Have a Nice Day!\n";
+            running = false;
+        }
+
+        else cout << "Invalid choice!\n";
+    }
+
+    return 0;
+} // }1 END OF MAIN
