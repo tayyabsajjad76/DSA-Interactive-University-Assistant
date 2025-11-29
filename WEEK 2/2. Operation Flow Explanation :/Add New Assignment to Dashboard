@@ -1,0 +1,15 @@
+• What the operation does:
+This operation allows students to add new assignments to their dashboard, keeping track of all tasks that need to be completed.
+Each assignment is queued so that students can work on them in the order they were assigned.
+
+• Which Data Structure supports it:
+Queue Data Structure.
+
+• Why the Data Structure is suitable:
+A queue operates on a First-In-First-Out (FIFO) basis, which matches the way assignments should be handled.
+The first assignment added is the first one the student completes, ensuring an organized workflow.
+Inserting at the back and processing from the front makes it easy to manage multiple tasks efficiently.
+
+• How the user interacts with it:
+When a student logs in and navigates to the “Assignments” section, they can add a new task. The system places
+it at the end of the queue. Students then view and complete assignments sequentially, promoting structure and preventing confusion.
