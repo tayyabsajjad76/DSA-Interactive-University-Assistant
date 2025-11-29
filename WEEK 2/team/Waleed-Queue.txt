@@ -1,0 +1,11 @@
+Waleed stands at the front of the line.
+Tayyab stands behind him.
+Moazzam stands last.
+they form a small line.
+waleed says
+"I am the Queue. First in, First Out. Task come in order, and the First task should leave first."
+Demonstration 
+insert/Enqueue
+Moazzam joins the line behind Tayyab 
+Remove/Dequeue 
+Waleed step out from the front 
