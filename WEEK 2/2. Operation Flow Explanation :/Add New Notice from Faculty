@@ -1,0 +1,15 @@
+• What the operation does:
+This operation posts new notices from faculty members to the “Latest Updates” section.
+It ensures students receive important information, such as announcements, exam schedules, or reminders, promptly.
+
+• Which Data Structure supports it:
+Stack Data Structure.
+
+• Why the Data Structure is suitable:
+A stack follows Last-In-First-Out (LIFO) behavior, which means the most recently added notice appears at the top of the list.
+This guarantees that students always see the latest announcements first, keeping information timely and relevant.
+
+• How the user interacts with it:
+Faculty members log in and submit new notices. The system pushes these updates to the top of the stack.
+When students access the “Notices” page, the most recent notice is immediately visible, ensuring they are
+informed about the latest developments.
