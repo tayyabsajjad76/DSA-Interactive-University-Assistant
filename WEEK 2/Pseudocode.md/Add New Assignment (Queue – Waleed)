@@ -1,0 +1,14 @@
+FUNCTION EnqueueAssignment(queue, assignment)
+    CREATE newNode WITH assignment
+    newNode.next ← NULL
+    
+    IF queue.rear IS NULL THEN
+        queue.front ← newNode
+        queue.rear ← newNode
+    ELSE
+        queue.rear.next ← newNode
+        queue.rear ← newNode
+    ENDIF
+    
+    DISPLAY "Assignment added successfully."
+END FUNCTION
