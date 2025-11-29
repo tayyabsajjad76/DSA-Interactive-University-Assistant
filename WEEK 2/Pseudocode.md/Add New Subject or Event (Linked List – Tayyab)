@@ -1,0 +1,18 @@
+FUNCTION AddSubject(head, subject)
+    CREATE newNode WITH subject
+    newNode.next ← NULL
+    
+    IF head IS NULL THEN
+        head ← newNode
+        DISPLAY "Subject added as first item."
+        RETURN
+    ENDIF
+    
+    current ← head
+    WHILE current.next IS NOT NULL DO
+        current ← current.next
+    END WHILE
+    
+    current.next ← newNode
+    DISPLAY "Subject added to list."
+END FUNCTION
