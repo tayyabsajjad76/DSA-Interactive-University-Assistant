@@ -1,0 +1,20 @@
+Linked List Movement (Led by Tayyab Sajjad)
+
+Tayyab stands first.
+Waleed stands behind him.
+Moazzam stands last.
+
+They connect by placing a hand on the shoulder of the next person.
+Tayyab says:
+“I am the Linked List. Each node points to the next, helping the system navigate subjects, events, and notices smoothly.”
+
+Demonstration:
+
+Insert Node:
+A member steps out and joins at the end of the chain.
+
+Delete Node:
+Any member steps out of the chain.
+
+Traversal:
+They walk forward one by one, showing pointer movement.
