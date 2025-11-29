@@ -1,0 +1,6 @@
+FUNCTION PushNotice(stack, notice)
+    CREATE newNode WITH notice
+    newNode.next ← stack.top
+    stack.top ← newNode
+    DISPLAY "New notice added to top."
+END FUNCTION
