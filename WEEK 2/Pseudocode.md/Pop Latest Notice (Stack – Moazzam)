@@ -1,0 +1,12 @@
+FUNCTION PopNotice(stack)
+    IF stack.top IS NULL THEN
+        DISPLAY "No notices to remove."
+        RETURN
+    ENDIF
+    
+    temp ← stack.top
+    stack.top ← stack.top.next
+    DELETE temp
+    
+    DISPLAY "Latest notice removed."
+END FUNCTION
