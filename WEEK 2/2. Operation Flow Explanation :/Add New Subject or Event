@@ -1,0 +1,16 @@
+• What the operation does:
+This operation allows students or administrators to add new subjects or events to the academic list,
+maintaining an organized record of courses, workshops, or extracurricular activities.
+
+• Which Data Structure supports it:
+It supports Link List Data Structure.
+
+• Why the Data Structure is suitable:
+A linked list allows easy insertion of new items without the need to shift existing elements.
+Each subject or event is stored as a node connected to the previous items. This structure keeps the list flexible,
+making it simple to add, remove, or rearrange items as needed.
+
+• How the user interacts with it:
+When users access the “Subjects” or “Events” page, they can add new items to the list.
+Each addition becomes a new node linked to the existing nodes. Students can navigate through the subjects or events
+sequentially, which makes browsing smooth and intuitive while maintaining an organized academic structure.
