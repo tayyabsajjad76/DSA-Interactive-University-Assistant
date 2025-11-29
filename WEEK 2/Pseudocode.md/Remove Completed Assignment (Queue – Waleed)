@@ -1,0 +1,16 @@
+FUNCTION DequeueAssignment(queue)
+    IF queue.front IS NULL THEN
+        DISPLAY "No assignments to remove."
+        RETURN
+    ENDIF
+    
+    temp ← queue.front
+    queue.front ← queue.front.next
+    
+    IF queue.front IS NULL THEN
+        queue.rear ← NULL
+    ENDIF
+    
+    DELETE temp
+    DISPLAY "Completed assignment removed."
+END FUNCTION
