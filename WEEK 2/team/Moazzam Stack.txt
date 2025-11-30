@@ -1,0 +1,15 @@
+Stack Movement (Led by Moazzam Ijaz)
+
+Moazzam stands in front, holding a notebook.
+
+Tayyab and Waleed stand around him with their notebooks.
+
+Moazzam says:
+
+“I am the Stack. Last In, First Out. The latest update stays on top.”
+
+Demonstration:
+
+Push: Waleed places his notebook on top of Moazzam’s. Tayyab places his on top next.
+
+Pop: Moazzam removes the top notebook.
