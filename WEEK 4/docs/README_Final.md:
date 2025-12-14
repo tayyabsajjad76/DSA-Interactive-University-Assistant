@@ -1,0 +1,77 @@
+# DSA-Based Interactive University Assistant
+
+## Project Overview
+The DSA-Based Interactive University Assistant is a console-based application developed to manage university-related information in an organized and efficient way.
+The project applies core Data Structures and Algorithms concepts to handle dynamic academic data such as university events, student assignment submissions, and official notices.
+The system provides a simple, menu-driven interface that allows users to interact with data in real time.
+
+This project demonstrates how fundamental data structures can be used to solve real-world academic and administrative problems while strengthening practical programming
+and problem-solving skills.
+
+## Project Category
+- Academic Resource Tracker  
+- Educational Software  
+- Console-Based Application  
+- Student Information System  
+
+## Data Structures Used
+- **Linked List**: Used for managing university events, allowing dynamic insertion and easy traversal.
+- **Queue (FIFO)**: Used for tracking student assignment submissions in the order they are received.
+- **Stack (LIFO)**: Used for managing university notices, ensuring the most recent notice is accessed first.
+
+## Key Features
+- Add and view university events dynamically.
+- Track assignment submissions in proper submission order.
+- Manage university notices with priority to the latest updates.
+- Menu-driven console interface for easy user interaction.
+- Efficient insertion, deletion, search, and display operations.
+- Modular code structure for better readability and maintenance.
+
+## System Modules
+1. **Event Management Module (Linked List)**
+   - Add new university events.
+   - Display all upcoming events.
+
+2. **Assignment Tracking Module (Queue)**
+   - Submit student assignments.
+   - View assignment submissions in FIFO order.
+
+3. **Notice Management Module (Stack)**
+   - Add new notices.
+   - View notices with the most recent displayed first.
+
+## Tools and Technologies
+- **Programming Language**: C++ (C++98 / C++03 compatible)
+- **IDE**: Dev C++ (Latest Stable Version)
+- **Interface**: Console / Command-Line Interface
+
+## How to Run the Project
+1. Open the project folder.
+2. Navigate to the `src` directory.
+3. Compile the source file using a C++ compiler (e.g., Dev C++).
+4. Run the compiled executable.
+5. Use the menu options to add, view, search, update, or delete data.
+
+## Limitations
+- Console-based interface only (no GUI).
+- Single-user operation.
+- No permanent data storage; data is lost when the program exits.
+- Limited to events, assignments, and notices.
+- No network or database integration.
+
+## Team Members
+- **Tayyab Sajjad (SP24-BCS-046)** – Project Developer  
+- **Moazam Ijaz (SP24-BCS-013)** – Documentation  
+- **Muhammad Waleed (SP24-BCS-052)** – Second Developer  
+
+## Future Enhancements
+- Add file handling for persistent data storage.
+- Extend system with exam schedules and student profiles.
+- Improve input validation and error handling.
+- Develop a graphical user interface.
+
+## Conclusion
+The DSA-Based Interactive University Assistant successfully applies fundamental data structures to manage university information in a structured and efficient manner.
+  The project highlights the practical importance of linked lists, queues, and stacks while providing a simple and interactive academic management tool.
+  Its modular design allows easy future expansion and improvement.
+
